@@ -1,0 +1,585 @@
+alicemod_aliceartificalexpansion_decision_add_star_asteroids = {
+    icon = decision_prospect
+
+    enactment_time = 0
+    resources = {
+        category = decisions
+        cost = {
+            unity = 500
+            energy = 500
+            minerals = 2000
+            influence = 25
+        }
+    }
+
+    potential = {
+        is_star = yes
+        solar_system = {
+            check_variable = {
+                which = alicemod_built_thing
+                value < 32
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                is_variable_set = aliceartificalexpansion_orbit_happened
+            }
+            custom_tooltip = {
+                fail_text = requires_max_3_times_fail_simple
+                success_text = requires_max_3_times_ice_dumping
+                check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value < 20
+                }
+            }
+        }
+        else = {
+            custom_tooltip = {
+                text = requires_max_3_times_pass_simple
+                always = yes
+            }
+        }
+    }
+
+    effect = {
+        hidden_effect = {
+            change_variable = {
+                which = aliceartificalexpansion_orbit_happened
+                value = 1
+            }
+        }
+        if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 1
+            }    }
+            solar_system = {
+                
+                spawn_planet = {
+                    class = pc_neutron_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 51
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 1"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 2
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_a_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 103
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 2"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 3
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_neutron_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 154
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 3"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 4
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_a_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 206
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 4"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 5
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_neutron_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 257
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 5"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 6
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_a_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 309
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 6"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 7
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_neutron_star
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 360
+                    orbit_distance_offset = 120
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 7"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 8
+            }    }
+            solar_system = {
+                
+                spawn_planet = {
+                    class = pc_gas_giant
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 51
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 8"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 9
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_black_hole
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 103
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 9"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 10
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_gas_giant
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 154
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 10"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 11
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_black_hole
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 206
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 11"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 12
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_gas_giant
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 257
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 12"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 13
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_black_hole
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 309
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 13"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 14
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_gas_giant
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 360
+                    orbit_distance_offset = 155
+                    size = 12
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "Stellar Mass - 14"
+                        set_planet_flag = new_asteroid
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 15
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_asteroid
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 5
+                    orbit_distance_offset = 175
+                    size = 2
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "A5"
+                        set_planet_flag = new_asteroid
+
+                        random_list = {
+                            10 = { add_deposit = d_minerals_6 }
+                            10 = { add_deposit = d_minerals_8 }
+                            10 = { add_deposit = d_minerals_10 }
+                            10 = { add_deposit = d_minerals_4 add_deposit = d_alloys_2 }
+                            10 = { add_deposit = d_minerals_1 add_deposit = d_alloys_3 }
+                            10 = { add_deposit = d_alloys_4 }
+                            10 = { add_deposit = d_minerals_3 add_deposit = d_energy_3 }
+                            10 = { add_deposit = d_minerals_2 add_deposit = d_energy_5 }
+                            50 = { add_deposit = d_minerals_3 }
+                            50 = { add_deposit = d_minerals_2 }
+                            50 = { add_deposit = d_minerals_1 }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 16
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_asteroid
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 65
+                    orbit_distance_offset = 175
+                    size = 2
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "A65"
+                        set_planet_flag = new_asteroid
+
+                        random_list = {
+                            10 = { add_deposit = d_minerals_6 }
+                            10 = { add_deposit = d_minerals_8 }
+                            10 = { add_deposit = d_minerals_10 }
+                            10 = { add_deposit = d_minerals_4 add_deposit = d_alloys_2 }
+                            10 = { add_deposit = d_minerals_1 add_deposit = d_alloys_3 }
+                            10 = { add_deposit = d_alloys_4 }
+                            10 = { add_deposit = d_minerals_3 add_deposit = d_energy_3 }
+                            10 = { add_deposit = d_minerals_2 add_deposit = d_energy_5 }
+                            50 = { add_deposit = d_minerals_3 }
+                            50 = { add_deposit = d_minerals_2 }
+                            50 = { add_deposit = d_minerals_1 }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 17
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_asteroid
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 125
+                    orbit_distance_offset = 175
+                    size = 2
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "A125"
+                        set_planet_flag = new_asteroid
+
+                        random_list = {
+                            10 = { add_deposit = d_minerals_6 }
+                            10 = { add_deposit = d_minerals_8 }
+                            10 = { add_deposit = d_minerals_10 }
+                            10 = { add_deposit = d_minerals_4 add_deposit = d_alloys_2 }
+                            10 = { add_deposit = d_minerals_1 add_deposit = d_alloys_3 }
+                            10 = { add_deposit = d_alloys_4 }
+                            10 = { add_deposit = d_minerals_3 add_deposit = d_energy_3 }
+                            10 = { add_deposit = d_minerals_2 add_deposit = d_energy_5 }
+                            50 = { add_deposit = d_minerals_3 }
+                            50 = { add_deposit = d_minerals_2 }
+                            50 = { add_deposit = d_minerals_1 }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 18
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_asteroid
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 185
+                    orbit_distance_offset = 175
+                    size = 2
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "A185"
+                        set_planet_flag = new_asteroid
+
+                        random_list = {
+                            10 = { add_deposit = d_minerals_6 }
+                            10 = { add_deposit = d_minerals_8 }
+                            10 = { add_deposit = d_minerals_10 }
+                            10 = { add_deposit = d_minerals_4 add_deposit = d_alloys_2 }
+                            10 = { add_deposit = d_minerals_1 add_deposit = d_alloys_3 }
+                            10 = { add_deposit = d_alloys_4 }
+                            10 = { add_deposit = d_minerals_3 add_deposit = d_energy_3 }
+                            10 = { add_deposit = d_minerals_2 add_deposit = d_energy_5 }
+                            50 = { add_deposit = d_minerals_3 }
+                            50 = { add_deposit = d_minerals_2 }
+                            50 = { add_deposit = d_minerals_1 }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 19
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_asteroid
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 245
+                    orbit_distance_offset = 175
+                    size = 2
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "A245"
+                        set_planet_flag = new_asteroid
+
+                        random_list = {
+                            10 = { add_deposit = d_minerals_6 }
+                            10 = { add_deposit = d_minerals_8 }
+                            10 = { add_deposit = d_minerals_10 }
+                            10 = { add_deposit = d_minerals_4 add_deposit = d_alloys_2 }
+                            10 = { add_deposit = d_minerals_1 add_deposit = d_alloys_3 }
+                            10 = { add_deposit = d_alloys_4 }
+                            10 = { add_deposit = d_minerals_3 add_deposit = d_energy_3 }
+                            10 = { add_deposit = d_minerals_2 add_deposit = d_energy_5 }
+                            50 = { add_deposit = d_minerals_3 }
+                            50 = { add_deposit = d_minerals_2 }
+                            50 = { add_deposit = d_minerals_1 }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = {
+                    which = aliceartificalexpansion_orbit_happened
+                    value <= 20
+            }    }
+            solar_system = {
+                spawn_planet = {
+                    class = pc_asteroid
+                    location = root
+                    orbit_location = yes
+                    orbit_angle_offset = 305
+                    orbit_distance_offset = 175
+                    size = 2
+                    has_ring = no
+
+                    init_effect = {
+                        set_name = "A305"
+                        set_planet_flag = new_asteroid
+
+                        random_list = {
+                            10 = { add_deposit = d_minerals_6 }
+                            10 = { add_deposit = d_minerals_8 }
+                            10 = { add_deposit = d_minerals_10 }
+                            10 = { add_deposit = d_minerals_4 add_deposit = d_alloys_2 }
+                            10 = { add_deposit = d_minerals_1 add_deposit = d_alloys_3 }
+                            10 = { add_deposit = d_alloys_4 }
+                            10 = { add_deposit = d_minerals_3 add_deposit = d_energy_3 }
+                            10 = { add_deposit = d_minerals_2 add_deposit = d_energy_5 }
+                            50 = { add_deposit = d_minerals_3 }
+                            50 = { add_deposit = d_minerals_2 }
+                            50 = { add_deposit = d_minerals_1 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}

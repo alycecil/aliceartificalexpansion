@@ -1,0 +1,11 @@
+﻿l_english:
+
+ # ###################################
+ # decisions
+ # ###################################
+
+ alicemod_aliceartificalexpansion_decision_add_star_asteroids:0 "Build Artificial World"
+ alicemod_aliceartificalexpansion_decision_add_star_asteroids_short:0 "Adds an artificial object in orbit around this star."
+ alicemod_aliceartificalexpansion_decision_add_star_asteroids_desc:0 "Adds an artificial object in orbit around this star."
+ alicemod_aliceartificalexpansion_decision_add_star_asteroids_tooltip:0 "Adds an artificial object in orbit around this star."
+
