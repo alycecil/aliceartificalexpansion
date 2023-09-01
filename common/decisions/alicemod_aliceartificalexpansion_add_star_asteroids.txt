@@ -1,3 +1,113 @@
+# this decision turns a barren planet into a terraforming candidate
+alicemod_aliceartificalexpansion_decision_upgrade_planet = {
+	owned_planets_only = no
+	enactment_time = 0
+
+	resources = {
+		category = decisions
+		cost = {
+            unity = 2000
+            energy = 2000
+            minerals = 2000
+            influence = 25
+		}
+	}
+
+	potential = {
+		# you would better make this strict enough or this can literally appear on every planet
+		OR = {
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+			is_planet_class = pc_toxic
+			is_planet_class = pc_frozen
+			is_planet_class = pc_molten
+		}
+		NOT = { has_modifier = terraforming_candidate }
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = terraforming_candidate
+			days = -1
+		}
+	}
+}
+
+alicemod_aliceartificalexpansion_decision_upgrade_star_asteroids = {
+    icon = decision_prospect
+	owned_planets_only = no
+
+    enactment_time = 0
+    resources = {
+        category = decisions
+        cost = {
+            unity = 200
+            energy = 200
+            minerals = 200
+            influence = 25
+        }
+    }
+
+    potential = {
+		OR = {
+			is_planet_class = pc_asteroid
+			is_planet_class = pc_rare_crystal_asteroid
+			is_planet_class = pc_ice_asteroid
+			is_planet_class = pc_broken
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+			is_planet_class = pc_shattered
+			is_planet_class = pc_toxic
+			is_planet_class = pc_frozen
+			is_planet_class = pc_molten
+			is_planet_class = pc_gas_giant
+		}
+    }
+	
+	effect = {
+		random_list = {
+			10 = { add_deposit = d_alloys_1 }
+			3 = { add_deposit = d_alloys_2 }
+			1 = { add_deposit = d_energy_4 }
+			2 = { add_deposit = d_energy_3 }
+			3 = { add_deposit = d_energy_2 }
+			4 = { add_deposit = d_energy_1 }
+			1 = { add_deposit = d_minerals_4 }
+			2 = { add_deposit = d_minerals_3 }
+			3 = { add_deposit = d_minerals_2 }
+			4 = { add_deposit = d_minerals_1 }
+			1 = { add_deposit = d_food_10 }
+			10 = { add_deposit = d_food_3 }
+			10 = { add_deposit = d_alloys_1 }
+			3 = { add_deposit = d_alloys_2 }
+			15 = {
+				add_deposit = d_volatile_motes_1
+			}
+			15 = {
+				add_deposit = d_exotic_gases_1
+			}
+			15 = {
+				add_deposit = d_exotic_gases_2
+			}
+			15 = {
+				add_deposit = d_volatile_motes_2
+			}
+			20 = {
+				add_deposit = d_rare_crystals_3
+			}
+			10 = {
+				add_deposit = d_rare_crystals_2
+			}
+			10 = {
+				add_deposit = d_rare_crystals_1
+			}
+			1 = { add_deposit = d_living_metal_deposit  }
+			1 = { add_deposit = d_zro_deposit_1 }
+		}
+	}
+	
+}
+
 alicemod_aliceartificalexpansion_decision_add_star_asteroids = {
     icon = decision_prospect
 

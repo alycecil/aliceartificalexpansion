@@ -9,3 +9,12 @@
  alicemod_aliceartificalexpansion_decision_add_star_asteroids_desc:0 "Adds an artificial object in orbit around this star."
  alicemod_aliceartificalexpansion_decision_add_star_asteroids_tooltip:0 "Adds an artificial object in orbit around this star."
 
+ alicemod_aliceartificalexpansion_decision_upgrade_star_asteroids:0 "Upgrade Mineable Resources"
+ alicemod_aliceartificalexpansion_decision_upgrade_star_asteroids_short:0 "Adds a deposit to the object in orbit."
+ alicemod_aliceartificalexpansion_decision_upgrade_star_asteroids_desc:0 "Adds a deposit to the object in orbit."
+ alicemod_aliceartificalexpansion_decision_upgrade_star_asteroids_tooltip:0 "Adds a deposit to the object in orbit."
+ 
+ alicemod_aliceartificalexpansion_decision_upgrade_planet:0 "Allow Terraforming"
+ alicemod_aliceartificalexpansion_decision_upgrade_planet_short:0 "Allows a planet to be terraformed by setting up precursory infrastructure."
+ alicemod_aliceartificalexpansion_decision_upgrade_planet_desc:0 "Allows a planet to be terraformed by setting up precursory infrastructure."
+ alicemod_aliceartificalexpansion_decision_upgrade_planet_tooltip:0 "Allows a planet to be terraformed by setting up precursory infrastructure."
